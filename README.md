@@ -27,4 +27,70 @@ Link [dataset](https://www.bts.dot.gov/)
 - Flight delays on state : see how big the flight delays are in the state
 - Delay by carrier : which airlines are experiencing the most delays
 
+## My project will include the following steps:
+- Data Collection: We’ll gather information from link dataset above, which provides the required datasets
+- Data Preparation: We’ll get the data ready for analysis by cleaning and organizing it neatly.
+- Exploring Data Analyst (EDA) : We will take a closer look at the data to see how flight delays are spread across all states and how much airline operators are experiencing delays
+- Visualizing the Data: To make things easier to see and understand, we’ll create visual pictures (charts and graphs) that show us interesting things about the data, helping us find trends and patterns.
+
+By following these steps, we’ll go from collecting the data to having a clear picture of what’s happening with airline delay
+
+### 1. Data Collection
+
+   The dataset we'll be using contains over 30,000 pieces of flight data such as airport name, airline name, city, state and more. We will dive into this data to find out what it means and how we can utilize it to find out the level of flight delays.
+   Analyzing this data can help us find out which airline operators experience the biggest delays, which cities and states experience the most flight delays and see trends in flight delays from year to year.
+   So, we're going to examine this data set, do some interesting analysis and data visualization. Let's get started because this is going to be pretty awesome. I will use Microsoft Excel to process the data I downloaded from the dataset link above.
+
+   ![Data Collection](img/dataclsn1.jpg)
+
+   The following are the columns of the table :
+   
+   year ; month ; carrier ; carrier_name ; airport ; airport_name ; arr_flights ; arr_del15 ; carrier_ct ; weather_ct ; nas_ct ; security_ct ; late_aircraft_ct ; arr_cancelled ; arr_diverted ; arr_delay ; carrier_delay ; weather_delay ; nas_delay ; security_delay ; late_aircraft_delay
+
+### 2. Data Preparation
+
+   Before we begin data analysis and visualization, we must first ensure that our dataset is clean and correctly formatted. This is known as data preparation, and it consists of multiple steps:
+   
+   2.1 Data Inspection: We’ll begin by inspecting the dataset for missing values, duplicates, or inconsistent data. We will also verify that the data types are correct and that the dataset is ready for analysis.
+   
+   2.2 Data Cleaning: After that, we’ll clean the dataset by deleting or correcting any errors, inconsistencies, or irrelevant data. This will improve the dataset’s reliability and accuracy.
+   
+   2.3 Data Transformation: Once the dataset has been cleaned, it may be necessary to alter it to make it more relevant for analysis. Scaling, normalization, and feature engineering are examples of this.
+   
+   2.4 Data Saving: After we’ve prepared the data, we’ll save it in a new file to avoid overwriting the original dataset. We may always return to the original dataset if necessary.
+
+   By following these processes, we can verify that our data is clean, correct, and ready for analysis
+
+
+   Let's take a action
+   - Check the data type
+     We will change the data type containing number to number and string to text. and check for duplicate data
+     ![Data Preparataion](img/dataclsn4.jpg)
+   - As we see in the airport_name column, there are state, city and airport names in one column. as an example : Albany, GA: Southwest Georgia Regional. we will separate this information into three sections. First we will separate the cities. by selecting text to columns on the Data tab
+     ![Data Preparation](img/dataclsn5.jpg)
+      - Do the same action for city and state
+      - Remove empty spaces from the columns we have separated earlier. we will use the =TRIM formula on the empty columns
+      - Combine two information into one column. as we see in column A (year) and B (month). we will combine the two information into one column by using function =Date(Year;Month;Date). However, because we don’t know what date it is, we assume it is the first date. Change date format to mmm-yy in formal cells
+      - Remove all decimal numbers (.00) from all columns in the table
+    
+   - Because we just want to analyze the flight delay case, I will delete the columns from arr_flight to arr_diverted. Keep in mind, if there is data that you don’t know or don’t need to include in your analysis, then it is better to delete it, this will make your analysis more consistent.
+   - Save our work in an excel file
   
+### 3. Explorating Data Analyst (EDA)
+
+   3.1 Create a map. The roundness of the city indicates the number of flight delays. the bigger the roundness the more delay. The darker the color in a state the more delay there is.
+   ![EDA](img/dayviz2.jpg)
+
+   As can be seen the city of Chicago is the city with the most flight delays.
+
+   3.2 Delay by Carrier. We filtered only the top 5 flight delays.
+       ![EDA](img/dayviz3.jpg)
+
+   Of the hundreds of flight operators, we can see that Southwest Airline Co. is the flight operator that has the most delays.
+
+   
+   
+   
+  
+      
+
