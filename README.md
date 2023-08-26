@@ -68,7 +68,7 @@ By following these steps, we’ll go from collecting the data to having a clear 
      ![Data Preparataion](img/dataclsn4.jpg)
    - As we see in the airport_name column, there are state, city and airport names in one column. as an example : Albany, GA: Southwest Georgia Regional. we will separate this information into three sections. First we will separate the cities. by selecting text to columns on the Data tab
      ![Data Preparation](img/dataclsn5.jpg)
-      - Do the same action for city and state
+      - Do the same action for state and airport names
       - Remove empty spaces from the columns we have separated earlier. we will use the =TRIM formula on the empty columns
       - Combine two information into one column. as we see in column A (year) and B (month). we will combine the two information into one column by using function =Date(Year;Month;Date). However, because we don’t know what date it is, we assume it is the first date. Change date format to mmm-yy in formal cells
       - Remove all decimal numbers (.00) from all columns in the table
@@ -83,14 +83,38 @@ By following these steps, we’ll go from collecting the data to having a clear 
 
    As can be seen the city of Chicago is the city with the most flight delays.
 
-   3.2 Delay by Carrier. We filtered only the top 5 flight delays.
+   3.2 Delay by Carrier. We filtered only the top 5 flight delays.:airplane:
        ![EDA](img/dayviz3.jpg)
 
    Of the hundreds of flight operators, we can see that Southwest Airline Co. is the flight operator that has the most delays.
 
-   
-   
-   
-  
+   3.3 Airport delays. We filtered only the top 5 airport delays.:airplane: 
+       ![EDA](img/datviz3.jpg)
+
+   Chicago O'Hare International airport is the airport with the highest number of flight delays.
+
+   3.4 Carrier delay trend. We display all data from June 2003 to March 2023.:airplane:
+        ![EDA](img/datviz4.jpg)
+   April 2020 is the year with the highest average delay of 56.34%. This may be due to the covid-19 pandemic where almost all human movement is restricted.
+
+   3.5 Total Delay. Displays all problem delays from June 2003 to March 2023.:airplane:
+        ![EDA](img/datviz5.jpg)
+
+
+## Conclusions
+
+1. The city of Chicago is the city with the most flight delays
+2. Southwest Airline Co. is the flight operator that has the most delays
+3. Chicago O'Hare International airport is the airport with the highest number of flight delays
+4. April 2020 is the year with the highest average delay of 56.34%. This may be due to the covid-19 pandemic where almost all human movement is restricted
+5. Total delay based on each problem :
+   - Late aircraft delay = 542,103K
+   - Carrier delay       = 442,293K
+   - Nas delay           = 365,581K
+   - Weather delay       = 75,462K
+   - Security delay      = 2,475K
+
+### The dashboard can be viewed by clicking :point_right: [Tableau Public](https://public.tableau.com/views/AirplaneDelayinUS/AirlineDelayinUS?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) link
+![EDA](img/datviz6.jpg)
       
 
